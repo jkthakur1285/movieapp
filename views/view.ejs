@@ -1,0 +1,55 @@
+<%-include("./partials/header")%>
+<div class="container-fluid bg-light pl-2">
+<div class="row pr-5">
+    <div class="col-md-3">
+        <p class="lead">Movie API</p>
+        <div class="list-group">
+        <p class="list-group-item active">Info</p>
+        
+      
+        </div>
+        </div>
+
+        <div class="col-md-9 shadow-lg p-3 mb-5 bg-white rounded">
+            <div class="thumbnail">
+                 <img class="img-responsive" src="<%= data.Poster%>">
+                </div>
+                <div class="caption-full">
+            <h4 class="text-right"><%= data.Year%>
+               
+                </h4>
+            <a href="#"><h4><%= data.Title%></h4></a>
+            <p><strong>Released:</strong><%= data.Released%></p>
+            <p><strong>Runtime:</strong><%= data.Runtime%></p>
+            <p><strong>Genre:</strong><%= data.Genre%></p>
+            <p><strong>Plot:</strong><%= data.Plot%></p>
+            <p><strong>Language:</strong><%= data.Language%></p>
+            <p><strong>Country</strong>:<%= data.Country%></p>
+            <p><strong>Awards</strong>:<%= data.Awards%></p>
+            
+            <p><strong>Type:</strong><%= data.Type%></p>
+            <% if(data.Type=='movie'){%>
+                <p><strong>BoxOffice:</strong><%= data.BoxOffice%></p>
+                <p><strong>Production</strong>:<%= data.Production%></p>
+            <%}%> 
+            <% if(data.Type=='series'){%>
+                <p><strong>totalSeasons:</strong><%= data.totalSeasons%></p>
+            <%}%>  
+        
+            </div>
+           
+            <div class="float-right">
+            
+                <p class="text-success"><strong>imdbRating:</strong><%= data.imdbRating%></p>  
+              </div>           
+
+
+    
+
+
+  
+
+
+</div>
+</div>
+<%-include("./partials/footer")%>
