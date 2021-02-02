@@ -47,7 +47,7 @@ app.get("/show/:name",function(req, res){
 
 
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT||1500
 
 app.listen(PORT,function(){
 	console.log("server has started at port no "+PORT)
