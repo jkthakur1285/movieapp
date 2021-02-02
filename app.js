@@ -47,8 +47,8 @@ app.get("/show/:name",function(req, res){
 
 
 
+const PORT = process.env.PORT
 
-
-app.listen(1500,function(){
-	console.log("server has started at port no 1500")
+app.listen(PORT,function(){
+	console.log("server has started at port no "+PORT)
 });
